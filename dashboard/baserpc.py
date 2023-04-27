@@ -160,7 +160,7 @@ class DashboardRPC:
 
         returning = {
             "botname": self.bot.user.name,
-            "botavatar": str(self.bot.user.avatar_url_as(static_format="png")),
+            "botavatar": str(self.bot.user.avatar.with_static_format("png")),
             "botid": self.bot.user.id,
             "clientid": client_id,
             "botinfo": markdown2.markdown(botinfo),
