@@ -63,7 +63,7 @@ class Dashboard(
     def cache_defaults(self):
         return {"roles": []}
 
-    async def cog_load(self):
+    async def initialize(self):
         config = await self.config.all_guilds()
         for k, v in config.items():
             self.configcache[k] = v

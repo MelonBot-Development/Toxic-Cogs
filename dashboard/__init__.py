@@ -4,4 +4,6 @@ from .dashboard import Dashboard
 
 
 async def setup(bot: Red):
-    await bot.add_cog(Dashboard(bot))
+    cog = Dashboard(bot)
+    await bot.add_cog(cog)
+    await cog.initialize()
